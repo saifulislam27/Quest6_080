@@ -25,4 +25,6 @@ fun RencanaStudyView(
         mutableStateOf("")
 
     }
+    var listData: MutableList<String> = mutableListOf(chosenDropdown, pilihankelas)
+
 }
