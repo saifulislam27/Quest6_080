@@ -174,6 +174,8 @@ fun MahasiswaFormView(
                         singleLine = true,
                         shape = RoundedCornerShape(50.dp)
                 )
+                Spacer(modifier = Modifier.padding(4.dp)
+                )
             }
         }
     }
