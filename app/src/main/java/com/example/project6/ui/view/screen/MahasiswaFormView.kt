@@ -171,6 +171,8 @@ fun MahasiswaFormView(
                             keyboardType = KeyboardType.Text,
                             imeAction = ImeAction.Next
                         ),
+                        singleLine = true,
+                        shape = RoundedCornerShape(50.dp)
                 )
             }
         }
