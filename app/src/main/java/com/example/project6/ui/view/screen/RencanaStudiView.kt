@@ -16,6 +16,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material3.Button
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -109,7 +110,7 @@ fun RencanaStudiView(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(16.dp)
-                ){
+                ) {
                     Text(
                         text = "Pilih Mata Kuliah Peminatan",
                         fontWeight = FontWeight.Bold
@@ -119,7 +120,8 @@ fun RencanaStudiView(
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Light
                     )
-                    Spacer(modifier = Modifier.padding(8.dp)
+                    Spacer(
+                        modifier = Modifier.padding(8.dp)
                     )
                     DynamicSelectField(
                         selectedvalue = chosenDropdown,
@@ -145,13 +147,14 @@ fun RencanaStudiView(
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceEvenly
-                    ){
+                    ) {
                         Ruangkelas.kelas.forEach { data ->
                             Row(verticalAlignment = Alignment.CenterVertically)
-                            {RadioButton(
-                                selected = pilihanKelas == data,
-                                onClick = { pilihanKelas = data }
-                            )
+                            {
+                                RadioButton(
+                                    selected = pilihanKelas == data,
+                                    onClick = { pilihanKelas = data }
+                                )
                                 Text(data)
                             }
                         }
@@ -176,7 +179,23 @@ fun RencanaStudiView(
                             fontSize = 18.sp,
                             modifier = Modifier.fillMaxWidth()
                         )
+                    }
+                    Spacer(modifier = Modifier.padding(8.dp))
 
+                    Row(
+                        horizontalArrangement = Arrangement.SpaceEvenly,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Button(onClick = { onBackButtonClicked() }) {
+                            Text(text = "Kembali")
+                        }
+                        Button(
+                            onClick = { onSubmitButtonClicked(listData) },
+                            enabled = checked
+                        ) {
+                            Text(text = "Lanjut")
+
+                        }
                     }
                 }
             }
