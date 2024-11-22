@@ -1,4 +1,10 @@
 package com.example.project6.data
 
-object RuangKelas {
+object Ruangkelas {
+    val kelas = listOf(
+        "A",
+        "B",
+        "C",
+        "D"
+    )
 }
