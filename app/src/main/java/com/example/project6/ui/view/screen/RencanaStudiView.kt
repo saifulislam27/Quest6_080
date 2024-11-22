@@ -132,6 +132,9 @@ fun RencanaStudiView(
                     )
                     Text(
                         text = "Silahkan pilih kelas dari mata kuliah yang anda inginkan",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Light
+
                     )
                 }
             }
