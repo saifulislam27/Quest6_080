@@ -15,6 +15,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
@@ -159,8 +160,14 @@ fun MahasiswaFormView(
                         value = nama,
                         onValueChange = { nama = it },
                         label = { Text(text = "Nama Mahasiswa") },
-                    )
-                }
+                        leadingIcon = {
+                            Icon(
+                                imageVector = Icons.Filled.Person,
+                                contentDescription = null
+
+                        )
+                    },
+                )
             }
         }
     }
