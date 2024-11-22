@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
@@ -181,8 +182,13 @@ fun MahasiswaFormView(
                     value = email,
                     onValueChange = { email = it },
                     label = { Text(text = "Email Mahasiswa") },
-
-                )
-            }
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Email,
+                            contentDescription = null
+                    )
+                },
+            )
         }
     }
+}
