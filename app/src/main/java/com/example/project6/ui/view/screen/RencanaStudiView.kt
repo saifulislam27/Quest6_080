@@ -111,6 +111,8 @@ fun RencanaStudiView(
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Light
                     )
+                    Spacer(modifier = Modifier.padding(8.dp)
+                    )
 
                 }
             }
