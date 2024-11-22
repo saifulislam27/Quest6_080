@@ -39,27 +39,27 @@ fun RencanaStudiView(
     mahasiswa: Mahasiswa,
     onSubmitButtonClicked: (MutableList<String>) -> Unit,
     onBackButtonClicked: () -> Unit
-){
+) {
     var chosenDropdown by remember {
         mutableStateOf(
             ""
         )
     }
     var checked by remember { mutableStateOf(false) }
-    var pilihanKelas by remember{
+    var pilihanKelas by remember {
         mutableStateOf("")
     }
     var listData: MutableList<String> = mutableListOf(chosenDropdown, pilihanKelas)
-    Column (
+    Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = colorResource(id = R.color.primary ))
-    ){
-        Row (
+            .background(color = colorResource(id = R.color.primary))
+    ) {
+        Row(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp), verticalAlignment = Alignment.CenterVertically
-        ){
+        ) {
             Image(
                 painter = painterResource(R.drawable.image),
                 contentDescription = "",
@@ -68,7 +68,7 @@ fun RencanaStudiView(
                     .size(50.dp)
             )
             Spacer(modifier = Modifier.padding(start = 16.dp))
-            Column  (modifier = Modifier.weight(1f)) {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(
                     text = mahasiswa.nama,
                     fontWeight = FontWeight.Bold,
@@ -96,8 +96,13 @@ fun RencanaStudiView(
                         color = Color.White,
                         shape = RoundedCornerShape(topEnd = 15.dp, topStart = 15.dp)
                     )
-            )
-
+            ) {
+                Column(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(16.dp)
+                ){}
+            }
         }
     }
 }
