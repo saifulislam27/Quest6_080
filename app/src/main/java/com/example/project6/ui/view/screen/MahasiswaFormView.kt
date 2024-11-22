@@ -192,7 +192,9 @@ fun MahasiswaFormView(
                         keyboardType = KeyboardType.Email,
                         imeAction = ImeAction.Done
                 ),
-            )
+                    singleLine = true,
+                    shape = RoundedCornerShape(50.dp)
+                )
         }
     }
 }
