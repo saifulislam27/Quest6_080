@@ -167,6 +167,10 @@ fun MahasiswaFormView(
 
                         )
                     },
+                        keyboardOptions = KeyboardOptions(
+                            keyboardType = KeyboardType.Text,
+                            imeAction = ImeAction.Next
+                        ),
                 )
             }
         }
