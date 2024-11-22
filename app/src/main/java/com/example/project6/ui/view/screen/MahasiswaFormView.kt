@@ -156,26 +156,27 @@ fun MahasiswaFormView(
                     )
                 }
                 Spacer(modifier = Modifier.padding(4.dp))
-                    OutlinedTextField(
-                        modifier = Modifier.fillMaxWidth(),
-                        value = nama,
-                        onValueChange = { nama = it },
-                        label = { Text(text = "Nama Mahasiswa") },
-                        leadingIcon = {
-                            Icon(
-                                imageVector = Icons.Filled.Person,
-                                contentDescription = null
+                OutlinedTextField(
+                    modifier = Modifier.fillMaxWidth(),
+                    value = nama,
+                    onValueChange = { nama = it },
+                    label = { Text(text = "Nama Mahasiswa") },
+                    leadingIcon = {
+                        Icon(
+                            imageVector = Icons.Filled.Person,
+                            contentDescription = null
 
                         )
                     },
-                        keyboardOptions = KeyboardOptions(
-                            keyboardType = KeyboardType.Text,
-                            imeAction = ImeAction.Next
-                        ),
-                        singleLine = true,
-                        shape = RoundedCornerShape(50.dp)
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Text,
+                        imeAction = ImeAction.Next
+                    ),
+                    singleLine = true,
+                    shape = RoundedCornerShape(50.dp)
                 )
-                Spacer(modifier = Modifier.padding(4.dp)
+                Spacer(
+                    modifier = Modifier.padding(4.dp)
                 )
                 OutlinedTextField(
                     modifier = Modifier.fillMaxWidth(),
@@ -186,17 +187,23 @@ fun MahasiswaFormView(
                         Icon(
                             imageVector = Icons.Filled.Email,
                             contentDescription = null
-                    )
-                },
+                        )
+                    },
                     keyboardOptions = KeyboardOptions(
                         keyboardType = KeyboardType.Email,
                         imeAction = ImeAction.Done
-                ),
+                    ),
                     singleLine = true,
                     shape = RoundedCornerShape(50.dp)
                 )
-                Spacer(modifier = Modifier.padding(15.dp)
+                Spacer(
+                    modifier = Modifier.padding(15.dp)
                 )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceEvenly
+                ) {
+            }
         }
     }
 }
