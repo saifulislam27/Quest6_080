@@ -36,6 +36,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.project6.R
 import com.example.project6.data.MataKuliah
+import com.example.project6.data.Ruangkelas
 import com.example.project6.model.Mahasiswa
 import com.example.project6.ui.widget.DynamicSelectField
 
@@ -142,7 +143,12 @@ fun RencanaStudiView(
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceEvenly
-                    ){}
+                    ){
+                        Ruangkelas.kelas.forEach { data ->
+                            Row(verticalAlignment = Alignment.CenterVertically)
+                            {}
+                        }
+                    }
                 }
             }
         }
