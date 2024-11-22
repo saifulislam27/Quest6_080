@@ -188,6 +188,10 @@ fun MahasiswaFormView(
                             contentDescription = null
                     )
                 },
+                    keyboardOptions = KeyboardOptions(
+                        keyboardType = KeyboardType.Email,
+                        imeAction = ImeAction.Done
+                ),
             )
         }
     }
